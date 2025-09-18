@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #006a78;
+  --color-primary-light: #1a7984;
+  --color-primary-dark: #043c42;
+  --color-phinix-teal: #008080;
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  /* --font-open-sans: 'Open Sans', sans-serif; */
+  /* --font-sigmar: "Sigmar", sans-serif; */
+  /* --font-poppins: "Poppins", sans-serif; */
+
+  /* Background */
+  /* solid */
+  --color-background: #f7f7f7;
+  /* image */
+  /* --bg-hero-pattern: url("/src/assets/h2_background.webp"); */
+  --bg-hero-pattern: url("/src/assets/hydrogen2.jpg");
+  /* --bg-hero-pattern-phinix: url("/src/assets/background-phinix.webp"); */
+  --bg-hero-pattern-phinix: url("/src/assets/bg-3.webp");
+  --bg-hero-pattern-econix: url("/src/assets/background-econix-new.jpg");
+}
+
+.bg-hero-pattern-with-opacity {
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  background-image: var(--bg-hero-pattern);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-hero-pattern-with-opacity::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #043c42;
+  opacity: 0.8;
+}
+
+.bg-hero-pattern-content {
+  position: relative; /* Asegura que el contenido esté encima del pseudo-elemento */
+  z-index: 10; /* Un valor alto para asegurar que esté en la parte superior */
+}
+
+.bg-hero-pattern-with-opacity-phinix {
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  background-image: var(--bg-hero-pattern-phinix);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-hero-pattern-with-opacity-phinix::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #043c42;
+  opacity: 0.5;
+}
+
+.bg-hero-pattern-with-opacity-econix {
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  background-image: var(--bg-hero-pattern-econix);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-hero-pattern-with-opacity-econix::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c3d4459;
+  opacity: 1;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text; /* Para soporte en navegadores antiguos */
+  color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* En tu archivo CSS global */
+.inline-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+
+/* PAGINA PHINIX ESTILOS  */
+.custom-values-list {
+  list-style: none;
+  counter-reset: custom-counter;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-values-list li {
+  counter-increment: custom-counter;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  position: relative;
+  line-height: 1.;
+}
+
+.custom-values-list li:before {
+  /*content: counter(custom-counter) ".";*/
+  position: absolute;
+  left: 0;
+  color: #088c9c; /* Color corporativo de PHINIX */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.custom-values-list strong {
+  color: #088c9c; /* Color corporativo de PHINIX */
+  display: flex;
+  margin-bottom: 0px;
+}
+
